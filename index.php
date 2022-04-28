@@ -1,1 +1,8 @@
-<h1>God loves His own people and He will take care of them.</h1>
+<?php
+    while(have_posts()) {
+        the_post(); ?>
+        <h2><?php the_title(); ?></h2>
+        <?php the_content(); ?>
+        <hr>
+    <?php }
+?>
