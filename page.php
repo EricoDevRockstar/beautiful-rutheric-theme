@@ -22,13 +22,13 @@
       </div> <!-- The Banner Section End -->
 
       <!-- The Child Pages Menu -->
-      <div class="page-links">
+      <!--<div class="page-links">
         <h2 class="page-links__title"><a href="#">About Us</a></h2>
         <ul class="min-list">
           <li class="current_page_item"><a href="#">Our History</a></li>
           <li><a href="#">Our Goals</a></li>
         </ul>
-      </div> <!-- The Child Pages Menu End -->
+      </div> --> <!-- The Child Pages Menu End -->
 
       <div class="generic-content">
 
