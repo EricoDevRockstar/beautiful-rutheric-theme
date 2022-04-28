@@ -9,6 +9,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Beautiful Rutheric Theme!</h1>
 </body>
 </html>
