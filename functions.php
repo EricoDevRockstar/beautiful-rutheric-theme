@@ -15,6 +15,8 @@ add_action('wp_enqueue_scripts', 'beautiful_rutheric_files');
 
 function beautiful_features() {
     register_nav_menu('headerMenuLocation', 'Header Menu Location Eric');
+    register_nav_menu('footerLocationOne', 'Footet Location One');
+    register_nav_menu('footerLocationTwo', 'Footet Location Two');
     add_theme_support('title-tag');
 }
 
