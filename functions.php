@@ -21,3 +21,14 @@ function beautiful_features() {
 }
 
 add_action('after_setup_theme', 'beautiful_features');
+
+function beautiful_custom_post_types() {
+    register_post_type('event', array(
+        'public' => true,
+        'labels' => array(
+            'name' => 'Events'
+        )
+    ));
+}
+
+add_action('init', 'beautiful_custom_post_types');
