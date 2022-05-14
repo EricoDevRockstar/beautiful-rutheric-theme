@@ -22,13 +22,19 @@ function beautiful_features() {
 
 add_action('after_setup_theme', 'beautiful_features');
 
+// Copypaste this code to a Must Use Plugin
 function beautiful_custom_post_types() {
     register_post_type('event', array(
         'public' => true,
         'labels' => array(
-            'name' => 'Events'
-        )
+            'name' => 'Events',
+            'add_new_item' => 'Add New Event',
+            'edit_item' => 'Edit Event',
+            'all_items' => 'All Events',
+            'singular_name' => 'Event'
+        ),
+        'menu_icon' => 'dashicons-calendar'
     ));
 }
 
-add_action('init', 'beautiful_custom_post_types');
+add_action('init', 'beautiful_custom_post_types'); // Must Use Plugin - Ends here.
