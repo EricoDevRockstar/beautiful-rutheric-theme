@@ -25,6 +25,10 @@ add_action('after_setup_theme', 'beautiful_features');
 // Copypaste this code to a Must Use Plugin
 function beautiful_custom_post_types() {
     register_post_type('event', array(
+        'show_in_rest' => true,
+        'support' => array('title', 'editor', 'excerpt'),
+        'rewrite' => array('slug' => 'events'),
+        'has_archive' => true,
         'public' => true,
         'labels' => array(
             'name' => 'Events',
