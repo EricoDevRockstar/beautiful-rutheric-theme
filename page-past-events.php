@@ -4,17 +4,35 @@
  <div class="page-banner">
     <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg') ?>);"></div>
     <div class="page-banner__content container container--narrow">
-      <h1 class="page-banner__title">All Events</h1>
+      <h1 class="page-banner__title">Past Events</h1>
       <div class="page-banner__intro">
-        <p>See what events are upcoming in out world!</p>
+        <p>Here are Recap of our past events.</p>
       </div>
     </div>  
   </div>
 
 <div class="container container--narrow page-section">
   <?php
-    while(have_posts()) {
-      the_post(); ?>
+
+    $today = date('Ymd');
+    $pastBeautifulEvents = new WP_Query(array(
+        'paged' => get_query_var('paged', 1),
+        'post_type' => 'event',
+        'meta_key' => 'event_date',
+        'oderby' => 'meta_value_num',
+        'order' => 'ASC',
+        'meta_query' => array(
+        array(
+        'key' => 'event_date',
+        'compare' => '<',
+        'value' => $today,
+        'type' => 'numeric'
+        )
+        )
+        ));
+
+    while($pastBeautifulEvents->have_posts()) {
+        $pastBeautifulEvents->the_post(); ?>
 
                 <div class="event-summary">
                   <a class="event-summary__date t-center" href="#">
@@ -35,12 +53,10 @@
                 </div>
 
     <?php }
-    echo paginate_links();
+    echo paginate_links(array(
+        'total' => $pastBeautifulEvents->max_num_pages
+    ));
   ?>
-
-    <hr class="section-break">
-    <p>Looking for a recap of the past events?<a href="<?php echo site_url('past-events'); ?>"> Check them herein listed</a>.</p>
-
 </div>
    <?php get_footer();
 ?>
