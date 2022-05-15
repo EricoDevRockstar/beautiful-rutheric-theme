@@ -12,7 +12,6 @@ function beautiful_rutheric_files() {
 add_action('wp_enqueue_scripts', 'beautiful_rutheric_files');
 
 // Change What You See in The Window Address Bar (Title Tag)
-
 function beautiful_features() {
     // register_nav_menu('headerMenuLocation', 'Header Menu Location Eric');
     // register_nav_menu('footerLocationOne', 'Footet Location One');
@@ -42,3 +41,24 @@ function beautiful_custom_post_types() {
 }
 
 add_action('init', 'beautiful_custom_post_types'); // Must Use Plugin - Ends here.
+
+
+// Custom Query to control the exclusion of Past Events, and sort the events by dates
+function beautiful_adjusted_queries($query) {
+    if (!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()) {
+        $today = date('Ymd');
+        $query->set('meta_key', 'event_date');
+        $query->set('orderby', 'meta_value_num');
+        $query->set('order', 'ASC');
+        $query->set('meta_query', array(
+            array(
+            'key' => 'event_date',
+            'compare' => '>=',
+            'value' => $today,
+            'type' => 'numeric'
+            )
+          ));
+    }
+    }
+    
+    add_action('pre_get_posts', 'beautiful_adjusted_queries');

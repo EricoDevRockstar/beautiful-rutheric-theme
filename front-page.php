@@ -20,7 +20,7 @@
           <?php
             $today = date('Ymd');
             $beautifulEvents = new WP_Query(array(
-            'posts_per_page' => -1,
+            'posts_per_page' => 2, // Set to -1 to show all the events.
             'post_type' => 'event',
             'meta_key' => 'event_date',
             'oderby' => 'meta_value_num',
