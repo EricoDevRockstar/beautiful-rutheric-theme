@@ -23,6 +23,8 @@ add_action('after_setup_theme', 'beautiful_features');
 
 // Copypaste this code to a Must Use Plugin
 function beautiful_custom_post_types() {
+
+    //Events Post Type
     register_post_type('event', array(
         'show_in_rest' => true,
         'support' => array('title', 'editor', 'excerpt'),
@@ -38,6 +40,24 @@ function beautiful_custom_post_types() {
         ),
         'menu_icon' => 'dashicons-calendar'
     ));
+
+    // Program Post Type
+    register_post_type('Program', array(
+        'show_in_rest' => true,
+        'support' => array('title', 'editor'),
+        'rewrite' => array('slug' => 'programs'),
+        'has_archive' => true,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Programs',
+            'add_new_item' => 'Add New Program',
+            'edit_item' => 'Edit Program',
+            'all_items' => 'All Programs',
+            'singular_name' => 'Program'
+        ),
+        'menu_icon' => 'dashicons-awards'
+    ));
+
 }
 
 add_action('init', 'beautiful_custom_post_types'); // Must Use Plugin - Ends here.
