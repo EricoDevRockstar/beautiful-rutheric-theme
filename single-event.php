@@ -10,6 +10,7 @@
         <h1 class="page-banner__title"><?php the_title(); ?></h1>
         <div class="page-banner__intro">
             <p>DONT FORGET TO REPLACE ME LATER</p>
+
         </div>
         </div>  
     </div>
@@ -24,10 +25,26 @@
             <?php the_content(); ?>
         </div>
 
+        <?php
+
+        $beautifulRelatedPrograms = get_field('related_programs');
+
+        if ($beautifulRelatedPrograms) {
+          echo '<hr class="section-break">';
+          echo '<h2 class="headline headline--medium">Related Program(s)</h2>';
+          echo '<ul class="link-list min-list">';
+          foreach($beautifulRelatedPrograms as $program) { ?>
+            <li><a href="<?php echo get_the_permalink($program); ?>"><?php echo get_the_title($program); ?></a></li>
+          <?php }
+          echo '</ul>';
+        }
+
+      ?>
+
     </div>
 
-    <?php }
+  <?php }
 
-get_footer();
+  get_footer();
 
 ?>

@@ -65,6 +65,13 @@ add_action('init', 'beautiful_custom_post_types'); // Must Use Plugin - Ends her
 
 // Custom Query to control the exclusion of Past Events, and sort the events by dates
 function beautiful_adjusted_queries($query) {
+
+    if (!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()) {
+        $query->set('orderby', 'title');
+        $query->set('order', 'ASC');
+        $query->set('post_per_page', '-1');
+    }
+
     if (!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()) {
         $today = date('Ymd');
         $query->set('meta_key', 'event_date');
