@@ -7,7 +7,7 @@
         <h1 class="headline headline--large">Welcome!</h1>
         <h2 class="headline headline--medium">We think you&rsquo;ll like it here.</h2>
         <h3 class="headline headline--small">Why don&rsquo;t you check out the <strong>major</strong> you&rsquo;re interested in?</h3>
-        <a href="#" class="btn btn--large btn--blue">Find Your Major</a>
+        <a href="<?php echo get_post_type_archive_link('program'); ?>" class="btn btn--large btn--blue">Find Your Major</a>
       </div>
     </div>
 
@@ -122,7 +122,7 @@
             <div class="hero-slider__interior container">
               <div class="hero-slider__overlay">
                 <h2 class="headline headline--medium t-center">An Apple a Day</h2>
-                <p class="t-center">Our dentistry program recommends eating apples.</p>
+                <p class="t-center">Our dentistry program recommends eating apples. It is always easier to know a good person in the mindst of many people. The way they carry themselves. The way they speak, the way the listen to others and the way they interact with others is crucial. Never be fooled by people at all, they always reveal themselves through their casual interaction with other human beings. It is that simple. Be it your wife, your siblings, your employees etc. They can never hide behind pretence if you kindly check. It is easy to get them in the act of their pretence. This I know for sure and this shall forever remain to be true no matter what... I shall forever indugle in the goodness of knowing who I am. I am true representation of the good or the worst that there can ever be in the world.</p>
                 <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
               </div>
             </div>
