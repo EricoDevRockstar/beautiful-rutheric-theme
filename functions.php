@@ -58,6 +58,21 @@ function beautiful_custom_post_types() {
         'menu_icon' => 'dashicons-awards'
     ));
 
+    // Professor Post Type
+    register_post_type('Professor', array(
+        'show_in_rest' => true,
+        'support' => array('title', 'editor'),
+        'public' => true,
+        'labels' => array(
+            'name' => 'Professors',
+            'add_new_item' => 'Add New Professor',
+            'edit_item' => 'Edit Professor',
+            'all_items' => 'All Professors',
+            'singular_name' => 'Professor'
+        ),
+        'menu_icon' => 'dashicons-welcome-learn-more'
+    ));
+
 }
 
 add_action('init', 'beautiful_custom_post_types'); // Must Use Plugin - Ends here.
