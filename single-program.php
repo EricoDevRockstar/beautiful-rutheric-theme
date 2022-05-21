@@ -26,6 +26,34 @@
         
         <!-- Relationship between Programs and events creation -->
         <?php
+
+    $beautifulProfessors = new WP_Query(array(
+        'posts_per_page' => -1,
+        'post_type' => 'professor',
+        'oderby' => 'title',
+        'order' => 'ASC',
+        'meta_query' => array(
+        array(
+            'key' => 'related_programs',
+            'compare' => 'LIKE',
+            'value' => '"' . get_the_ID() . '"'
+        )
+        )
+        ));
+
+        if ($beautifulProfessors->have_posts()) {
+
+            echo '<hr class="section-break">';
+        echo '<h2 class="headline headline--medium"> ' . get_the_title() . ' professors</h2>';
+
+        while($beautifulProfessors->have_posts()) {
+        $beautifulProfessors->the_post(); ?>
+        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+    <?php }
+
+        }
+            wp_reset_postdata();
+
             $today = date('Ymd');
             $beautifulEvents = new WP_Query(array(
             'posts_per_page' => 2, // Set to -1 to show all the events.
