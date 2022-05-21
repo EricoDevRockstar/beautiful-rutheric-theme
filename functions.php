@@ -17,6 +17,7 @@ function beautiful_features() {
     // register_nav_menu('footerLocationOne', 'Footet Location One');
     // register_nav_menu('footerLocationTwo', 'Footet Location Two');
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme', 'beautiful_features');
@@ -27,7 +28,7 @@ function beautiful_custom_post_types() {
     //Events Post Type
     register_post_type('event', array(
         'show_in_rest' => true,
-        'support' => array('title', 'editor', 'excerpt'),
+        'supports' => array('title', 'editor', 'excerpt'),
         'rewrite' => array('slug' => 'events'),
         'has_archive' => true,
         'public' => true,
@@ -44,7 +45,7 @@ function beautiful_custom_post_types() {
     // Program Post Type
     register_post_type('Program', array(
         'show_in_rest' => true,
-        'support' => array('title', 'editor'),
+        'supports' => array('title', 'editor'),
         'rewrite' => array('slug' => 'programs'),
         'has_archive' => true,
         'public' => true,
@@ -61,7 +62,7 @@ function beautiful_custom_post_types() {
     // Professor Post Type
     register_post_type('Professor', array(
         'show_in_rest' => true,
-        'support' => array('title', 'editor'),
+        'supports' => array('title', 'editor', 'thumbnail'),
         'public' => true,
         'labels' => array(
             'name' => 'Professors',
