@@ -18,76 +18,37 @@
         <!-- Relationship between Programs and events creation -->
         <?php
 
-    $beautifulProfessors = new WP_Query(array(
+    $beautifulPrograms = new WP_Query(array(
         'posts_per_page' => -1,
-        'post_type' => 'professor',
+        'post_type' => 'program',
         'oderby' => 'title',
         'order' => 'ASC',
         'meta_query' => array(
         array(
-            'key' => 'related_programs',
+            'key' => 'related_campus',
             'compare' => 'LIKE',
             'value' => '"' . get_the_ID() . '"'
         )
         )
         ));
 
-        if ($beautifulProfessors->have_posts()) {
+        if ($beautifulPrograms->have_posts()) {
 
             echo '<hr class="section-break">';
-        echo '<h2 class="headline headline--medium"> ' . get_the_title() . ' professors</h2>';
+        echo '<h2 class="headline headline--medium">Programs Available at this Campus</h2>';
         
-        echo '<ul class="professor-cards"';
-        while($beautifulProfessors->have_posts()) {
-        $beautifulProfessors->the_post(); ?>
-        <li class="professor-card__list-item">
-            <a class="professor-card" href="<?php the_permalink(); ?>">
-                <img src="<?php the_post_thumbnail_url('professorLandscape'); ?>" alt="" class="professor-card__image">
-                <span class="professor-card__name"><?php the_title(); ?></span>
-            </a>
+        echo '<ul class="link-list min-list">';
+        while($beautifulPrograms->have_posts()) {
+        $beautifulPrograms->the_post(); ?>
+        <li>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </li>
     <?php }
     echo '</ul>';
 
         }
-            wp_reset_postdata();
-
-            $today = date('Ymd');
-            $beautifulEvents = new WP_Query(array(
-            'posts_per_page' => 2, // Set to -1 to show all the events.
-            'post_type' => 'event',
-            'meta_key' => 'event_date',
-            'oderby' => 'meta_value_num',
-            'order' => 'ASC',
-            'meta_query' => array(
-              array(
-              'key' => 'event_date',
-              'compare' => '>=',
-              'value' => $today,
-              'type' => 'numeric'
-              ),
-              array(
-                'key' => 'related_programs',
-                'compare' => 'LIKE',
-                'value' => '"' . get_the_ID() . '"'
-              )
-            )
-            ));
-
-            if ($beautifulEvents->have_posts()) {
-
-                echo '<hr class="section-break">';
-            echo '<h2 class="headline headline--medium">Upcoming ' . get_the_title() . ' events</h2>';
-
-            while($beautifulEvents->have_posts()) {
-
-            $beautifulEvents->the_post();
-            get_template_part('template-parts/event');
-          }
-
-            }
-
-          ?>
+        wp_reset_postdata();
+        ?>
 
     </div>
 
