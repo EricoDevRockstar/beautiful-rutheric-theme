@@ -11,7 +11,7 @@ beautifulPageBanner(array(
   <?php
     while(have_posts()) {
       the_post(); ?>
-        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+        <li><a href="<?php the_permalink(); ?>"><?php the_title(); $beautifulMapLocation = get_field('map_location'); echo $beautifulMapLocation['lng']; ?></a></li>
     <?php }
     echo paginate_links();
   ?>

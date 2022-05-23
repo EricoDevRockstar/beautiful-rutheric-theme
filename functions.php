@@ -158,3 +158,10 @@ function beautiful_adjusted_queries($query) {
     }
     
     add_action('pre_get_posts', 'beautiful_adjusted_queries');
+
+    function beautifulMapKey($api) {
+        $api['key'] = 'TheKeyGivenAfterYouRegisteredFor22Api16';
+        Return $api;
+    }
+
+    add_filter('acf/field/google_map/api', 'beautifulMapKey');
