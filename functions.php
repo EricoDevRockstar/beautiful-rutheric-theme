@@ -219,3 +219,12 @@ function ourBeaufitulLoginScreenUrl() {
     }
     
     add_action('login_enqueue_scripts', 'ourBeautifulLoginCSS');
+
+    function OurBeautifulLoginTitle() {
+
+        return get_bloginfo('name');
+        //return 'The Most Beautiful Theme!';
+        
+        }
+        
+        add_filter('login_headertitle', 'OurBeautifulLoginTitle');
