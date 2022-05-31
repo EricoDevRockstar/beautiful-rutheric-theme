@@ -80,6 +80,8 @@ function beautiful_custom_post_types() {
 
     //Events Post Type
     register_post_type('event', array(
+        'capability_type' => 'event',
+        'map_meta_cap' => true,
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'excerpt'),
         'rewrite' => array('slug' => 'events'),
