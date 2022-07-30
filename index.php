@@ -17,7 +17,7 @@ beautifulPageBanner(array(
 
         <div class="generic-content">
           <?php the_excerpt(); ?>
-          <p><a href="<?php the_permalink(); ?>" class="btn btn--blue">Continue reading &raquo;</a></p>
+          <p><a href="<?php the_permalink(); ?>" class="btn btn--blue">Continue reading Grace Mwangi K.&raquo;</a></p>
         </div>
       </div>
     <?php }
