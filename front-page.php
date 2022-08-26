@@ -101,7 +101,7 @@
                 <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
               </div>
             </div>
-          </div>
+          </div> <!-- 30/07/2022 It was amasing sex -->
           <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/bread.jpg'); ?>)">
             <div class="hero-slider__interior container">
               <div class="hero-slider__overlay">
