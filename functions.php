@@ -29,7 +29,7 @@ function beautifulPageBanner($args = NULL) {
             <p><?php echo $args['subtitle']; ?></p>
 
         </div>
-        </div>  
+        </div>
     </div>
 
 <?php }
@@ -244,3 +244,9 @@ function ourBeaufitulLoginScreenUrl() {
         }
         
         add_filter('login_headertitle', 'OurBeautifulLoginTitle');
+
+        /*function firstRepeatedWord($sentence) {
+
+        }
+
+        $fptr = fopen(getenv("OUTPUT_PATH"), "w");*/

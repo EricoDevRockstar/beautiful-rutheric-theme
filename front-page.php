@@ -40,7 +40,7 @@
             $beautifulEvents->the_post();
             get_template_part('template-parts/event');
           }
-
+          
           ?>
           <p class="t-center no-margin"><a href="<?php echo get_post_type_archive_link('event'); ?>" class="btn btn--blue">View All Events</a></p>
         </div>
@@ -98,7 +98,12 @@
               <div class="hero-slider__overlay">
                 <h2 class="headline headline--medium t-center">An Apple a Day</h2>
                 <p class="t-center">Our dentistry program recommends eating apples. It is always easier to know a good person in the mindst of many people. The way they carry themselves. The way they speak, the way the listen to others and the way they interact with others is crucial. Never be fooled by people at all, they always reveal themselves through their casual interaction with other human beings. It is that simple. Be it your wife, your siblings, your employees etc. They can never hide behind pretence if you kindly check. It is easy to get them in the act of their pretence. This I know for sure and this shall forever remain to be true no matter what... I shall forever indugle in the goodness of knowing who I am. I am true representation of the good or the worst that there can ever be in the world.</p>
+                <p>I certainly would have guessed what she will say even before I heard her voice. The previous day, when she heard that I am coming back from Rwanda, that is when all that started to unfold. I knew that she will say she miscarriaged since she was not pregnant in the first place.</p>
+
+                <p>People always think that you are stupid or dumb. You read them way ahead of time and can easily tell what is going on with them. I didn't believe her and if it is certainly true what she said. Then God may you forgive me for judging her that much at least. I am sorry to you God and to her if it was true. But if it was not true that she was never pregnant in the first place, then God may you continue to speak to me at all time. I guessed that she would say what she just said.</p>
                 <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
+
+                <p>I went and met Sherry. Then we decided to come and spend at place</p>
               </div>
             </div>
           </div> <!-- 30/07/2022 It was amasing sex -->
