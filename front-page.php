@@ -102,8 +102,6 @@
 
                 <p>People always think that you are stupid or dumb. You read them way ahead of time and can easily tell what is going on with them. I didn't believe her and if it is certainly true what she said. Then God may you forgive me for judging her that much at least. I am sorry to you God and to her if it was true. But if it was not true that she was never pregnant in the first place, then God may you continue to speak to me at all time. I guessed that she would say what she just said.</p>
                 <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
-
-                <p>I went and met Sherry. Then we decided to come.</p>
               </div>
             </div>
           </div> <!-- 30/07/2022 It was amasing sex -->
