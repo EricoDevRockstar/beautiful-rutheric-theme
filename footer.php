@@ -17,7 +17,7 @@
                 // wp_nav_menu(array(
                   // 'theme_location' => 'footerLocationOne'
                 // ));
-                // Ruth is great
+                // Ruth is great and she is pgd...
               ?>
                 <ul>
                   <li><a href="<?php echo site_url('/about-us'); ?>">About Us</a></li>
